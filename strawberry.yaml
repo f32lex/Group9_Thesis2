@@ -1,0 +1,9 @@
+path: C:\Users\flxsy\Documents\Thesis2\strawberry_detection\datasets
+
+train: train
+val: val
+test: test
+
+nc: 3
+names: ['ripe', 'unripe', 'peduncle']
+
