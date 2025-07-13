@@ -1,0 +1,82 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 3000,
+        "width": 4000
+    },
+    "objects": [
+        {
+            "id": 14754088,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:20:55.563Z",
+            "updatedAt": "2023-07-12T12:20:55.563Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        1678,
+                        1664
+                    ],
+                    [
+                        2040,
+                        1999
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14754087,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:20:55.563Z",
+            "updatedAt": "2023-07-12T12:20:55.563Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        1490,
+                        0
+                    ],
+                    [
+                        1761,
+                        327
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14754086,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:20:55.563Z",
+            "updatedAt": "2023-07-12T12:20:55.563Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        1802,
+                        1302
+                    ],
+                    [
+                        1878,
+                        1818
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,226 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 3000,
+        "width": 4000
+    },
+    "objects": [
+        {
+            "id": 14752140,
+            "classId": 21173,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.737Z",
+            "updatedAt": "2023-07-12T12:05:10.737Z",
+            "tags": [],
+            "classTitle": "unripe",
+            "points": {
+                "exterior": [
+                    [
+                        1786,
+                        2130
+                    ],
+                    [
+                        2136,
+                        2558
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752139,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.737Z",
+            "updatedAt": "2023-07-12T12:05:10.737Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        1510,
+                        1367
+                    ],
+                    [
+                        2313,
+                        2108
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752138,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.737Z",
+            "updatedAt": "2023-07-12T12:05:10.737Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        2100,
+                        1695
+                    ],
+                    [
+                        3017,
+                        2528
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752137,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.737Z",
+            "updatedAt": "2023-07-12T12:05:10.737Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        3246,
+                        479
+                    ],
+                    [
+                        3999,
+                        1353
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752136,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.737Z",
+            "updatedAt": "2023-07-12T12:05:10.737Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        2022,
+                        1165
+                    ],
+                    [
+                        2383,
+                        1754
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752135,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.736Z",
+            "updatedAt": "2023-07-12T12:05:10.736Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        2498,
+                        1146
+                    ],
+                    [
+                        2822,
+                        1950
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752134,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.736Z",
+            "updatedAt": "2023-07-12T12:05:10.736Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        1952,
+                        1994
+                    ],
+                    [
+                        2184,
+                        2186
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752133,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.736Z",
+            "updatedAt": "2023-07-12T12:05:10.736Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        2671,
+                        320
+                    ],
+                    [
+                        3119,
+                        836
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752132,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:05:10.736Z",
+            "updatedAt": "2023-07-12T12:05:10.736Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        2861,
+                        15
+                    ],
+                    [
+                        3492,
+                        314
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

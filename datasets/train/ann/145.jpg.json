@@ -1,0 +1,34 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 3000,
+        "width": 4000
+    },
+    "objects": [
+        {
+            "id": 14749922,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:51:14.484Z",
+            "updatedAt": "2023-07-12T11:51:14.484Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        780,
+                        1253
+                    ],
+                    [
+                        1241,
+                        1655
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

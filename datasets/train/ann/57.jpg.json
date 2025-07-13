@@ -1,0 +1,106 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 720,
+        "width": 1280
+    },
+    "objects": [
+        {
+            "id": 14752611,
+            "classId": 21173,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:08:01.723Z",
+            "updatedAt": "2023-07-12T12:08:01.723Z",
+            "tags": [],
+            "classTitle": "unripe",
+            "points": {
+                "exterior": [
+                    [
+                        446,
+                        386
+                    ],
+                    [
+                        468,
+                        412
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752610,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:08:01.723Z",
+            "updatedAt": "2023-07-12T12:08:01.723Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        708,
+                        107
+                    ],
+                    [
+                        736,
+                        129
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752609,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:08:01.723Z",
+            "updatedAt": "2023-07-12T12:08:01.723Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        457,
+                        416
+                    ],
+                    [
+                        488,
+                        435
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14752608,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:08:01.722Z",
+            "updatedAt": "2023-07-12T12:08:01.722Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        1224,
+                        590
+                    ],
+                    [
+                        1256,
+                        633
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

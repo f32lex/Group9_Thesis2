@@ -1,0 +1,58 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 720,
+        "width": 1280
+    },
+    "objects": [
+        {
+            "id": 14751036,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:58:33.752Z",
+            "updatedAt": "2023-07-12T11:58:33.752Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        256,
+                        292
+                    ],
+                    [
+                        456,
+                        464
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751035,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:58:33.752Z",
+            "updatedAt": "2023-07-12T11:58:33.752Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        842,
+                        191
+                    ],
+                    [
+                        1156,
+                        489
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 1080,
+        "width": 1920
+    },
+    "objects": [
+        {
+            "id": 14751757,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.836Z",
+            "updatedAt": "2023-07-12T12:03:00.836Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        725,
+                        340
+                    ],
+                    [
+                        893,
+                        518
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751756,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.836Z",
+            "updatedAt": "2023-07-12T12:03:00.836Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        959,
+                        766
+                    ],
+                    [
+                        1111,
+                        921
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751755,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.836Z",
+            "updatedAt": "2023-07-12T12:03:00.836Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        1073,
+                        866
+                    ],
+                    [
+                        1236,
+                        1028
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751754,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.835Z",
+            "updatedAt": "2023-07-12T12:03:00.835Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        804,
+                        382
+                    ],
+                    [
+                        1056,
+                        445
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751753,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.835Z",
+            "updatedAt": "2023-07-12T12:03:00.835Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        1160,
+                        876
+                    ],
+                    [
+                        1209,
+                        981
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14751752,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:03:00.835Z",
+            "updatedAt": "2023-07-12T12:03:00.835Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        1048,
+                        841
+                    ],
+                    [
+                        1174,
+                        909
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 1080,
+        "width": 1920
+    },
+    "objects": [
+        {
+            "id": 14749587,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:49:30.307Z",
+            "updatedAt": "2023-07-12T11:49:30.307Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        234,
+                        738
+                    ],
+                    [
+                        407,
+                        837
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14749586,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:49:30.307Z",
+            "updatedAt": "2023-07-12T11:49:30.307Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        922,
+                        341
+                    ],
+                    [
+                        996,
+                        501
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14749585,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:49:30.307Z",
+            "updatedAt": "2023-07-12T11:49:30.307Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        827,
+                        409
+                    ],
+                    [
+                        1053,
+                        584
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14749584,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:49:30.306Z",
+            "updatedAt": "2023-07-12T11:49:30.306Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        331,
+                        725
+                    ],
+                    [
+                        629,
+                        929
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14749583,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T11:49:30.306Z",
+            "updatedAt": "2023-07-12T11:49:30.306Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        1111,
+                        446
+                    ],
+                    [
+                        1190,
+                        536
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

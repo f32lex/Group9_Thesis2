@@ -1,0 +1,30 @@
+{
+    "classes": [
+        {
+            "title": "peduncle",
+            "shape": "rectangle",
+            "color": "#8A7D0F",
+            "geometry_config": {},
+            "id": 21176,
+            "hotkey": ""
+        },
+        {
+            "title": "ripe",
+            "shape": "rectangle",
+            "color": "#0F2E8A",
+            "geometry_config": {},
+            "id": 21171,
+            "hotkey": ""
+        },
+        {
+            "title": "unripe",
+            "shape": "rectangle",
+            "color": "#8A240F",
+            "geometry_config": {},
+            "id": 21173,
+            "hotkey": ""
+        }
+    ],
+    "tags": [],
+    "projectType": "images"
+}

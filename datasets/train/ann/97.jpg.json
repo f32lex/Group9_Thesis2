@@ -1,0 +1,82 @@
+{
+    "description": "",
+    "tags": [],
+    "size": {
+        "height": 1280,
+        "width": 720
+    },
+    "objects": [
+        {
+            "id": 14753433,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:12:31.058Z",
+            "updatedAt": "2023-07-12T12:12:31.058Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        0,
+                        211
+                    ],
+                    [
+                        169,
+                        412
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14753432,
+            "classId": 21171,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:12:31.058Z",
+            "updatedAt": "2023-07-12T12:12:31.058Z",
+            "tags": [],
+            "classTitle": "ripe",
+            "points": {
+                "exterior": [
+                    [
+                        222,
+                        317
+                    ],
+                    [
+                        568,
+                        655
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 14753431,
+            "classId": 21176,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "vo@datasetninja.com",
+            "createdAt": "2023-07-12T12:12:31.058Z",
+            "updatedAt": "2023-07-12T12:12:31.058Z",
+            "tags": [],
+            "classTitle": "peduncle",
+            "points": {
+                "exterior": [
+                    [
+                        364,
+                        87
+                    ],
+                    [
+                        478,
+                        441
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}
