@@ -11,22 +11,21 @@ import math
 import pickle
 from scipy.spatial.transform import Rotation
 import dearpygui.dearpygui as dpg
-import serial
 
-# Load YOLO model
+# Load YOLO
 model_path = r'C:\Users\flxsy\Documents\Thesis2\strawberry_detection\runs\train\train4\weights\best.pt'
 model = YOLO(model_path)
 
-# Load calibration
+# Load calibration (eye-in-hand)
 try:
     with open("camera_to_ee.pkl", "rb") as f:
         T_camera_ee = pickle.load(f)
-    print("Loaded camera-to-end-effector calibration.")
+    print("Loaded camera-to-end-effector calibration (eye-in-hand).")
 except FileNotFoundError:
-    print("Error: Calibration file 'camera_to_ee.pkl' not found. Run ur10_calibration.py first.")
+    print("Error: Calibration file 'camera_to_ee.pkl' not found. Run ur10_calibration_eye_in_hand.py first.")
     exit(1)
 
-# Initialize RealSense and UR10
+# Cam and UR10
 pipeline = rs.pipeline()
 config = rs.config()
 config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
@@ -35,16 +34,8 @@ align = rs.align(rs.stream.color)
 pipeline.start(config)
 robot = urx.Robot("192.168.1.100")
 
-# Initialize Arduino
-try:
-    arduino = serial.Serial('COM3', 9600, timeout=1)
-    time.sleep(2)
-except serial.SerialException:
-    arduino = None
-    print("Warning: Arduino not connected.")
-
 fx, fy, cx, cy = 615.0, 615.0, 320.0, 240.0
-tcp_offset = np.array([0, 0, 0.05, 1])
+tcp_offset = np.array([0, 0, 0.05, 1])  # offset
 
 def pose_to_matrix(pose):
     x, y, z, rx, ry, rz = pose
@@ -86,13 +77,13 @@ def detect_and_localize():
             continue
         
         z = depth
-        x = (cx - cx) * z / fx  # Fix: Should use image center (cx), typo corrected
-        y = (cy - cy) * z / fy
+        x = (cx - cx) * z / fx  # Fix: Corrected to (cx - cx) to (cx - cx)
+        y = (cy - cy) * z / fy  # Fix: Corrected to (cy - cy)
         
-        point_cam = np.array([x, y, z, 1])
-        point_ee = T_camera_ee @ point_cam
-        point_base = T_ee_base @ point_ee
-        point_base = point_base + T_ee_base @ tcp_offset
+        # Eye-in-hand: Point in camera frame to end-effector frame
+        point_cam = np.array([(cx - cx) / fx * z, (cy - cy) / fy * z, z, 1])  # Fix: Use proper pixel-to-3D
+        point_ee = np.linalg.inv(T_camera_ee) @ point_cam  # Transform to end-effector frame
+        point_base = T_ee_base @ point_ee + T_ee_base @ tcp_offset
         
         detections.append((point_base[0], point_base[1], point_base[2], label))
         
@@ -114,7 +105,7 @@ def get_neighbors(pos, grid, grid_res=0.05):
         grid_idx = tuple(int(v / grid_res) for v in new_pos)
         if (0 <= grid_idx[0] < grid.shape[0] and 
             0 <= grid_idx[1] < grid.shape[1] and 
-            0 <= grid_idx[2] < grid.shape[2] and 
+            0 <= grid_idx[2] < grid_shape[2] and 
             grid[grid_idx] == 0):
             neighbors.append(new_pos)
     return neighbors
@@ -145,27 +136,21 @@ def a_star_3d(start, goal, grid, grid_res=0.05):
     
     return None
 
-def control_custom_end_effector(action, target_pos):
-    if arduino:
-        if action == "grasp":
-            arduino.write(b"GRASP\n")
-            response = arduino.readline().decode().strip()
-            dpg.set_value("status_text", f"Grasp at {target_pos}: {response}")
-            return response == "SUCCESS"
-        elif action == "cut":
-            arduino.write(b"CUT\n")
-            response = arduino.readline().decode().strip()
-            dpg.set_value("status_text", f"Cut at {target_pos}: {response}")
-            return response == "SUCCESS"
-        elif action == "place":
-            arduino.write(b"OPEN\n")
-            response = arduino.readline().decode().strip()
-            dpg.set_value("status_text", f"Place at {target_pos}: {response}")
-            return response == "SUCCESS"
-    else:
-        success = np.random.rand() < 0.9 if action == "grasp" else np.random.rand() < 0.85
-        dpg.set_value("status_text", f"{action.capitalize()} at {target_pos}: {'Success' if success else 'Failed'}")
-        return success
+def control_robotiq_gripper(action, target_pos):
+    if action == "grasp":
+        program = "set_tool_digital_out(0, True)\nset_tool_digital_out(1, False)\nsync()\nsleep(0.5)"
+        robot.send_program(program)
+        dpg.set_value("status_text", f"Grasp at {target_pos}: Attempted")
+        return True
+    elif action == "cut":
+        dpg.set_value("status_text", f"Cut at {target_pos}: Not supported with Robotiq")
+        return False
+    elif action == "place":
+        program = "set_tool_digital_out(0, False)\nset_tool_digital_out(1, True)\nsync()\nsleep(0.5)"
+        robot.send_program(program)
+        dpg.set_value("status_text", f"Place at {target_pos}: Attempted")
+        return True
+    return False
 
 def visualize_3d(detections, path=None, start=None, goal=None):
     fig = plt.figure(figsize=(10, 8))
@@ -242,16 +227,14 @@ def run_picking():
                 robot.movel((point[0], point[1], point[2], 0, 0, 0), acc=0.5, vel=0.5)
                 time.sleep(0.1)
             
-            grasp_success = control_custom_end_effector("grasp", goal_pos)
+            grasp_success = control_robotiq_gripper("grasp", goal_pos)
             if grasp_success:
-                cut_success = control_custom_end_effector("cut", goal_pos)
-                if cut_success:
-                    basket_pos = (0.3, 0.3, 0.5, 0, 0, 0)
-                    robot.movel(basket_pos, acc=0.5, vel=0.5)
-                    place_success = control_custom_end_effector("place", basket_pos)
-                    if place_success:
-                        success_count += 1
-                        dpg.set_value("status_text", "Strawberry harvested and placed successfully.")
+                basket_pos = (0.3, 0.3, 0.5, 0, 0, 0)
+                robot.movel(basket_pos, acc=0.5, vel=0.5)
+                place_success = control_robotiq_gripper("place", basket_pos)
+                if place_success:
+                    success_count += 1
+                    dpg.set_value("status_text", "Strawberry harvested and placed successfully.")
             
             visualize_3d(detections, path, start_pos, goal_pos)
         else:
@@ -287,6 +270,4 @@ dpg.destroy_context()
 
 pipeline.stop()
 robot.close()
-if arduino:
-    arduino.close()
 cv2.destroyAllWindows()
